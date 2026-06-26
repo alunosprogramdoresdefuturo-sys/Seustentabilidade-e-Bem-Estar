@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compostagem - EcoVida</title>
+    
+    <link rel="stylesheet" href="2.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="logo">
+            <i class="fa-solid fa-leaf"></i> EcoVida
+        </div>
+        <nav class="nav-links">
+            <a href="1.html"><i class="fa-solid fa-house"></i> Início</a>
+            <a href="2.html"><i class="fa-solid fa-seedling"></i> Compostagem</a>
+            <a href="3.html"><i class="fa-solid fa-recycle"></i> 5Rs</a>
+        </nav>
+    </header>
+
+    <section class="hero-banner">
+        <div class="hero-overlay">
+            <h1>Sua compostagem em casa!</h1>
+        </div>
+    </section>
+
+    <main class="content-container" id="como-fazer">
+        <h2>Como fazer uma compostagem caseira?</h2>
+        <p class="subtitle">Para começar, você vai precisar equilibrar três elementos principais em caixas ou baldes:</p>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <i class="fa-solid fa-bucket icon-card"></i>
+                <h3>1. A Composteira</h3>
+                <p>Um sistema de 3 caixas empilhadas (ou baldes furados). As duas de cima servem para a compostagem e a de baixo serve para coletar o biofertilizante líquido.</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-apple-whole icon-card"></i>
+                <h3>2. Matéria Úmida (Verdes)</h3>
+                <p>Restos de alimentos, cascas de frutas e legumes, borra de café e cascas de ovo. Eles trazem o nitrogênio necessário para o processo.</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-tree icon-card"></i>
+                <h3>3. Matéria Seca (Castanhos)</h3>
+                <p>Folhas secas, serragem de madeira (não tratada) ou papel picado. Eles trazem o carbono e evitam o mau cheiro e insetos.</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="quiz-container">
+        <h2>Vamos vê se aprendeu?</h2>
+        
+        <div class="quiz-box">
+            <p class="question">Qual dos itens abaixo <strong>NÃO</strong> deve ser colocado na sua composteira caseira de jeito nenhum?</p>
+            
+            <div class="alternatives">
+                <label class="alternative-option" data-correct="false">
+                    <input type="radio" name="quiz" value="A">
+                    <span><strong>A)</strong> Cascas de banana e borra de café.</span>
+                </label>
+                
+                <label class="alternative-option" data-correct="true">
+                    <input type="radio" name="quiz" value="B">
+                    <span><strong>B)</strong> Restos de carne, laticínios e alimentos muito temperados.</span>
+                </label>
+                
+                <label class="alternative-option" data-correct="false">
+                    <input type="radio" name="quiz" value="C">
+                    <span><strong>C)</strong> Folhas secas e serragem pura de madeira.</span>
+                </label>
+                
+                <label class="alternative-option" data-correct="false">
+                    <input type="radio" name="quiz" value="D">
+                    <span><strong>D)</strong> Cascas de ovos bem trituradas.</span>
+                </label>
+            </div>
+
+            <div class="quiz-actions">
+                <button class="btn-response" onclick="verificarResposta()">Mostrar resposta</button>
+            </div>
+
+            <div id="quiz-feedback" class="feedback-box hidden">
+                <p><strong>Resposta Correta: Alternativa B!</strong></p>
+                <p>Carnes, laticínios e alimentos cozidos/temperados geram mau cheiro forte, atraem animais indesejados (como ratos e baratas) e atrasam a decomposição na compostagem caseira convencional.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 EcoVida - Práticas para um futuro consciente.</p>
+    </footer>
+
+    <script>
+        function verificarResposta() {
+            // Mostra a caixa de explicação
+            const feedback = document.getElementById('quiz-feedback');
+            feedback.classList.remove('hidden');
+            
+            // Destaca visualmente a alternativa correta colocando uma borda verde
+            const options = document.querySelectorAll('.alternative-option');
+            options.forEach(option => {
+                if(option.getAttribute('data-correct') === 'true') {
+                    option.classList.add('correct-highlight');
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
